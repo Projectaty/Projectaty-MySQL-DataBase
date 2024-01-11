@@ -7,6 +7,9 @@ In this project, there exists 4 diffrent entities with diffrent attributes:
 3. **Team**: TeamID (Primary Key), ProjectID (Foreign Key referencing Project), MemberID (Foreign Key referencing Student)
 4. **Task**: TaskID (Primary Key), ProjectID (Foreign Key referencing Project), Title, Description (optional), Status (Incomplete, Complete), AssignedTo (Foreign Key referencing Student)
 
+![image](https://github.com/Projectaty/Projectaty-MySQL-DB/assets/65151701/47a26a21-19bc-497e-b7f6-781729929afa)
+
+
 **_Relationships_**:
 1. One Student can create multiple Projects.
 2. One Project can have multiple Teams.

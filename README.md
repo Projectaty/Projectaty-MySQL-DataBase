@@ -15,4 +15,5 @@ In this project, there exists 4 diffrent entities with diffrent attributes:
 5. One Task is associated with one Project and can be assigned to one Student.
 
 ## Entity Relationship Diagram:
-![ERD-diagram](https://github.com/Projectaty/Projectaty-MySQL-DB/assets/65151701/f51dbfab-88a9-4549-9e47-796dabeee8db)
+
+![ERD-diagram](https://github.com/Projectaty/Projectaty-MySQL-DB/assets/65151701/bc2a9e35-3dd8-409d-91ca-615b8006da5a)

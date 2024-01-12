@@ -1,0 +1,73 @@
+-- SQLBook: Markup
+# Projectaty Databse
+-- SQLBook: Markup
+## Specifications
+
+In this project, there exists 4 diffrent entities with diffrent attributes:
+
+<b>Entities:</b>
+
+    1. Student: StudentID (Primary Key), username, password(sha), email
+    2. Project: ProjectID (Primary Key), Title, Description(optional), Deadline (Date), PrivacySetting (Public, Private), and CreatorID (Foreign Key referencing Student)
+    3. Team: TeamID (Primary Key), ProjectID (Foreign Key referencing Project), MemberID (Foreign Key referencing Student)
+    4. Task: TaskID (Primary Key), ProjectID (Foreign Key referencing Project), Title, Description (optional), Status (Incomplete, Complete), AssignedTo (Foreign Key referencing Student)
+
+<b>Relationships:</b>
+
+    One Student can create multiple Projects.
+    One Project can have multiple Teams.
+    One Student can be a member of multiple Teams.
+    One Project can have multiple Tasks.
+    One Task is associated with one Project and can be assigned to one Student.
+
+-- SQLBook: Markup
+### Create DB
+-- SQLBook: Code
+CREATE DATABASE IF NOT EXISTS projectatyDB;
+USE projectatyDB;
+-- SQLBook: Markup
+### Crerate Tables
+-- SQLBook: Markup
+#### Create Student
+-- SQLBook: Code
+CREATE TABLE Student (
+    StudentID INT PRIMARY KEY,
+    username VARCHAR(255),
+    password CHAR(40),
+    email VARCHAR(255)
+);
+-- SQLBook: Markup
+#### Create Project
+-- SQLBook: Code
+CREATE TABLE Project (
+    ProjectID INT PRIMARY KEY,
+    Title VARCHAR(255),
+    Description TEXT,
+    Deadline DATE,
+    PrivacySetting CHAR(7), -- ('Public', 'Private')
+    CreatorID INT,
+    FOREIGN KEY (CreatorID) REFERENCES Student(StudentID)
+);
+-- SQLBook: Markup
+#### Create Team
+-- SQLBook: Code
+CREATE TABLE Team (
+    TeamID INT PRIMARY KEY,
+    ProjectID INT,
+    MemberID INT,
+    FOREIGN KEY (ProjectID) REFERENCES Project(ProjectID),
+    FOREIGN KEY (MemberID) REFERENCES Student(StudentID)
+);
+-- SQLBook: Markup
+#### Create Task
+-- SQLBook: Code
+CREATE TABLE Task (
+    TaskID INT PRIMARY KEY,
+    ProjectID INT,
+    Title VARCHAR(255),
+    Description TEXT,
+    Status VARCHAR(9), -- ('Incomplete', 'Complete'),
+    AssignedTo INT,
+    FOREIGN KEY (ProjectID) REFERENCES Project(ProjectID),
+    FOREIGN KEY (AssignedTo) REFERENCES Student(StudentID)
+);

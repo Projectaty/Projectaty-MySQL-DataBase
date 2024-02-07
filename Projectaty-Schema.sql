@@ -5,7 +5,8 @@ CREATE TABLE Student (
     StudentID INT PRIMARY KEY,
     username VARCHAR(255),
     password CHAR(40),
-    email VARCHAR(255)
+    email VARCHAR(255),
+    profile_pic VARCHAR(255)
 );
 
 CREATE TABLE Project (

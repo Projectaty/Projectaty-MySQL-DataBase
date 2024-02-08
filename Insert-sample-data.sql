@@ -22,11 +22,11 @@ INSERT INTO Collaboration (TeamID, ProjectID) VALUES (3, 3);
 INSERT INTO Collaboration (TeamID, ProjectID) VALUES (4, 4);
 INSERT INTO Collaboration (TeamID, ProjectID) VALUES (5, 5);
 
-INSERT INTO TeamMembership (TeamID, MemberID) VALUES (1, 1)
-INSERT INTO TeamMembership (TeamID, MemberID) VALUES (1, 2)
-INSERT INTO TeamMembership (TeamID, MemberID) VALUES (2, 2)
-INSERT INTO TeamMembership (TeamID, MemberID) VALUES (2, 3)
-INSERT INTO TeamMembership (TeamID, MemberID) VALUES (3, 3)
+INSERT INTO TeamMembership (TeamID, MemberID) VALUES (1, 1);
+INSERT INTO TeamMembership (TeamID, MemberID) VALUES (1, 2);
+INSERT INTO TeamMembership (TeamID, MemberID) VALUES (2, 2);
+INSERT INTO TeamMembership (TeamID, MemberID) VALUES (2, 3);
+INSERT INTO TeamMembership (TeamID, MemberID) VALUES (3, 3);
 
 INSERT INTO Task (TaskID, ProjectID, Title, Description, Status, AssignedTo) VALUES (1, 1, 'Design Homepage', 'Create homepage', 'todo', 1);
 INSERT INTO Task (TaskID, ProjectID, Title, Description, Status, AssignedTo) VALUES (2, 2, 'Data Cleaning', 'Clean and preprocess the dataset', 'inprogress', 2);

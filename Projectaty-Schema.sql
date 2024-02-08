@@ -32,7 +32,7 @@ CREATE TABLE Task (
     ProjectID INT,
     Title VARCHAR(255),
     Description TEXT,
-    Status VARCHAR(9), -- ('Incomplete', 'Complete'),
+    Status VARCHAR(9), -- ('done', 'todo','inprogress'),
     AssignedTo INT,
     FOREIGN KEY (ProjectID) REFERENCES Project(ProjectID),
     FOREIGN KEY (AssignedTo) REFERENCES Student(StudentID)

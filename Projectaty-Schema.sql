@@ -24,6 +24,13 @@ CREATE TABLE Team (
     ProjectID INT,
     MemberID INT,
     FOREIGN KEY (ProjectID) REFERENCES Project(ProjectID),
+);
+
+CREATE TABLE TeamMembership (
+    TeamID INT,
+    MemberID INT,
+    PRIMARY KEY (TeamID, MemberID),
+    FOREIGN KEY (TeamID) REFERENCES Team(TeamID),
     FOREIGN KEY (MemberID) REFERENCES Student(StudentID)
 );
 

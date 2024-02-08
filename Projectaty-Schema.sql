@@ -21,7 +21,8 @@ CREATE TABLE Project (
 
 CREATE TABLE Team (
     TeamID INT PRIMARY KEY,
-    TeamName VARCHAR(255)
+    TeamName VARCHAR(255),
+    Description TEXT
 );
 
 CREATE TABLE Collaboration (

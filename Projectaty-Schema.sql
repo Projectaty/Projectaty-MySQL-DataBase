@@ -21,9 +21,15 @@ CREATE TABLE Project (
 
 CREATE TABLE Team (
     TeamID INT PRIMARY KEY,
+    TeamName VARCHAR(255)
+);
+
+CREATE TABLE Collaboration (
+    TeamID INT,
     ProjectID INT,
-    MemberID INT,
-    FOREIGN KEY (ProjectID) REFERENCES Project(ProjectID),
+    PRIMARY KEY (TeamID, ProjectID),
+    FOREIGN KEY (TeamID) REFERENCES Team(TeamID),
+    FOREIGN KEY (ProjectID) REFERENCES Project(ProjectID)
 );
 
 CREATE TABLE TeamMembership (

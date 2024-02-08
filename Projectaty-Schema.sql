@@ -22,6 +22,7 @@ CREATE TABLE Project (
 CREATE TABLE Team (
     TeamID INT PRIMARY KEY,
     TeamName VARCHAR(255),
+    PrivacySetting CHAR(7), -- ('Public', 'Private')
     Description TEXT
 );
 

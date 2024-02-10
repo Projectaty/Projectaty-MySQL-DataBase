@@ -49,6 +49,7 @@ CREATE TABLE Task (
     Description TEXT,
     Status VARCHAR(9), -- ('done', 'todo','inprogress'),
     AssignedTo INT,
+    Deadline DATE,
     FOREIGN KEY (ProjectID) REFERENCES Project(ProjectID),
     FOREIGN KEY (AssignedTo) REFERENCES Student(StudentID)
 );
